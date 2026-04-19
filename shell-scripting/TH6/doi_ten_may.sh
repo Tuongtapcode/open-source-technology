@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# if [ "$EUID" -ne 0 ]; then
-#     echo "Loi ban khong du quyen de thay doi may tinh"
-#     echo "Yeu cau dang nhap vao user root"
-#     exit 1;
-# fi
+if [ "$EUID" -ne 0 ]; then
+    echo "Loi ban khong du quyen de thay doi may tinh"
+    echo "Yeu cau dang nhap vao user root"
+    exit 1;
+fi
 
 read -r -p "Nhap ten may tinh moi: " ten_moi
 read -r -p "Ban co chac muon xac nhan (Y/N): " xac_nhan
